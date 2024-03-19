@@ -58,13 +58,14 @@ export default function MobileNav() {
             <HamburgerMenuIcon className="w-6 h-6" />
             <span className="sr-only">Toggle Menu</span>
           </SheetTrigger>
-          <SheetContent className="flex flex-col">
+          <SheetContent className="flex flex-col flex-grow">
             <SheetHeader className="text-left">
               <SheetTitle>Mobile First</SheetTitle>
               <SheetDescription>
                 Unleash Your Competitive Edge with Mobile-First Development!
               </SheetDescription>
             </SheetHeader>
+
             <div className="flex flex-col space-y-3">
               <Link href="/">Home</Link>
               <Link href="#why">Why</Link>
@@ -74,14 +75,13 @@ export default function MobileNav() {
                 Github
               </Link>
             </div>
-            <SheetFooter className="h-full">
-              <div
-                className="flex items-center justify-center space-x-1"
-                onClick={() => handleCopyrightChange()}
-              >
-                <Copyright className="w-4 h-4" />
-                <span>2024 - {copyright}.</span>
-              </div>
+
+            <SheetFooter
+              className="flex flex-row items-center space-x-1 mx-auto mt-auto"
+              onClick={() => handleCopyrightChange()}
+            >
+              <Copyright className="w-4 h-4" />
+              <span>2024 - {copyright}.</span>
             </SheetFooter>
           </SheetContent>
         </Sheet>
