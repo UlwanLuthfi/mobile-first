@@ -55,7 +55,7 @@ export default function ToolsAndResources() {
   ];
 
   return (
-    <section id="tools" className="space-y-4 pt-20">
+    <section id="tools" className="space-y-4 pt-20 md:px-20">
       <div className="text-center space-y-4">
         <h2 className="text-3xl font-semibold tracking-tight">
           Tools & Resources for Mobile-First Success
@@ -67,7 +67,7 @@ export default function ToolsAndResources() {
         </p>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-4 lg:grid lg:grid-cols-2 lg:space-y-0 lg:gap-4">
         {resources.map((resource) => {
           return (
             <Card key={resource.title}>

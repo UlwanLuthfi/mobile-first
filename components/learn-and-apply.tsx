@@ -5,7 +5,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export default function LearnAndApply() {
   return (
-    <section id="learn" className="space-y-4 pt-20">
+    <section id="learn" className="space-y-4 pt-20 md:px-20">
       <div className="text-center space-y-4">
         <h2 className="text-3xl font-semibold tracking-tight">
           Learn, Apply, and Grow With Us!

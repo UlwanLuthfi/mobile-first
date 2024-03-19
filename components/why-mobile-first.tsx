@@ -47,7 +47,7 @@ export default function WhyMobileFirst() {
   ];
 
   return (
-    <section id="why" className="space-y-4 pt-20">
+    <section id="why" className="space-y-4 pt-20 md:px-20">
       <div className="text-center space-y-4">
         <h2 className="text-3xl font-semibold tracking-tight">
           Why Mobile-First?
@@ -59,7 +59,7 @@ export default function WhyMobileFirst() {
         </p>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0">
         {benefits.map((benefit) => {
           return (
             <Card key={benefit.title}>

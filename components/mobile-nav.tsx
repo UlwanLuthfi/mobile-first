@@ -28,7 +28,7 @@ export default function MobileNav() {
   };
 
   return (
-    <nav className="fixed w-full top-0 backdrop-blur border-b">
+    <nav className="fixed w-full top-0 backdrop-blur border-b md:hidden">
       <div className="flex justify-between items-center p-5">
         <Link href="/">
           <Image src={VercelLogo} alt="Vercel Logo" className="w-7" />
