@@ -11,13 +11,26 @@ import {
 } from "@/components/ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
-import VercelLogo from "@/public/Vercel/icon/dark/vercel-icon-dark.svg";
+import VercelLogoDark from "@/public/Vercel/icon/dark/vercel-icon-dark.svg";
+import VercelLogoLight from "@/public/Vercel/icon/light/vercel-icon-light.svg";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Copyright } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import { ModeToggleMobile } from "./mode-toggle-mobile";
 
 export default function MobileNav() {
   const [copyright, setCopyright] = useState("Mobile First, Inc");
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   const handleCopyrightChange = () => {
     setCopyright((prevCopyright) =>
@@ -29,10 +42,16 @@ export default function MobileNav() {
 
   return (
     <nav className="fixed w-full top-0 backdrop-blur border-b md:hidden">
-      <div className="flex justify-between items-center p-5">
+      <div className="flex justify-between items-center p-3">
         <Link href="/">
-          <Image src={VercelLogo} alt="Vercel Logo" className="w-7" />
+          {resolvedTheme === "dark" ? (
+            <Image src={VercelLogoLight} alt="Vercel Logo" className="w-6" />
+          ) : (
+            <Image src={VercelLogoDark} alt="Vercel Logo" className="w-6" />
+          )}
         </Link>
+
+        <ModeToggleMobile />
 
         <Sheet>
           <SheetTrigger>
