@@ -21,6 +21,12 @@ export default function WhyMobileFirst() {
         "Reach more users with an optimally responsive design on any device.",
     },
     {
+      icon: <Settings />,
+      title: "Development Efficiency",
+      description:
+        "Reduce development complexity by focusing on adaptive design for various devices.",
+    },
+    {
       icon: <BarChart4 />,
       title: "Enhanced SEO",
       description:
@@ -31,12 +37,6 @@ export default function WhyMobileFirst() {
       title: "Improved User Experience",
       description:
         "Deliver a seamless and engaging user experience, enhancing user retention and satisfaction.",
-    },
-    {
-      icon: <Settings />,
-      title: "Development Efficiency",
-      description:
-        "Reduce development complexity by focusing on adaptive design for various devices.",
     },
     {
       icon: <Rocket />,
