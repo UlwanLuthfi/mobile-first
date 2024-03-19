@@ -35,22 +35,22 @@ export default function MainNav() {
 
         <ul className="flex items-center space-x-4">
           <li>
-            <Link href="/" className="hover:underline">
+            <Link href="/" className="font-medium hover:underline">
               Home
             </Link>
           </li>
           <li>
-            <Link href="#why" className="hover:underline">
+            <Link href="#why" className="font-medium hover:underline">
               Why
             </Link>
           </li>
           <li>
-            <Link href="#tools" className="hover:underline">
+            <Link href="#tools" className="font-medium hover:underline">
               Tools
             </Link>
           </li>
           <li>
-            <Link href="#learn" className="hover:underline">
+            <Link href="#learn" className="font-medium hover:underline">
               Learn
             </Link>
           </li>

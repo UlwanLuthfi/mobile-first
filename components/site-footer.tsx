@@ -22,27 +22,10 @@ export default function SiteFooter() {
   };
 
   return (
-    <footer className="p-6 mt-32 bg-black">
-      <div className="flex flex-col gap-y-4">
-        <span className="text-white">
-          Discover the competitive advantage of building for mobile-first. Join
-          our community and achieve digital success!
-        </span>
-
-        <div className="flex flex-col text-white">
-          <div>Have question?</div>
-          <div>
-            Reach out to us at{" "}
-            <span className="underline">contact@mobile-first.inc</span>
-          </div>
-        </div>
-      </div>
-
-      <Separator className="my-4" />
-
+    <footer className="p-6 mt-32 border-t-2">
       <div className="flex justify-between">
         <div
-          className="flex items-center space-x-1 text-white"
+          className="flex items-center space-x-1 cursor-pointer"
           onClick={() => handleCopyrightChange()}
         >
           <Copyright className="w-5 h-5" />
